@@ -12,7 +12,16 @@ return [
     | as required, but they're a perfect start for most applications.
     |
     */
-
+    [
+        'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
+    ],
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
